@@ -30,10 +30,10 @@
             justify-content: center;
         }
         .qrcode {
-            width: 40mm; /* Increased width */
-            height: 40mm; /* Increased height */
+            width: 40mm;
+            height: 40mm;
             margin-bottom: 3mm;
-            margin-top: 10mm; /* Adjusted margin */
+            margin-top: 10mm;
         }
         .username {
             font-size: 12px;
@@ -48,11 +48,11 @@
             width: calc(100% - 10mm);
         }
         .top-left {
-            top: 1mm; /* Moved upwards */
+            top: 1mm;
             left: 5mm;
         }
         .bottom-right {
-            bottom: 3mm; /* Moved downwards */
+            bottom: 3mm;
             right: 5mm;
         }
         .input-container {
@@ -67,7 +67,6 @@
             font-size: 14px;
             cursor: pointer;
         }
-
         /* Hide input fields and buttons when printing */
         @media print {
             .input-container {
@@ -91,13 +90,16 @@
         </div>
         <img src="https://static2.yooco.de/n2/e4/790639/u/7f/3837881/storage/qrcode_24.png" alt="QR Code" class="qrcode">
         <div class="username" id="cardUsername">Your Username</div>
-        <div class="corner-text bottom-right">JIPCOM: Fostering Connections, Unlocking New Horizons</div>
+        <div class="corner-text bottom-right">
+            JIPCOM: Fostering Connections, Unlocking New Horizons
+        </div>
     </div>
 
     <script>
         function updateCard() {
-            var username = document.getElementById('username').value;
-            document.getElementById('cardUsername').textContent = username;
+            var usernameInput = document.getElementById('username').value;
+            var cardUsername = document.getElementById('cardUsername');
+            cardUsername.textContent = usernameInput ? usernameInput : 'Your Username';
         }
     </script>
 </body>
