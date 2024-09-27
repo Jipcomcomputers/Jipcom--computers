@@ -1,0 +1,109 @@
+
+<p>-&lt;!DOCTYPE html&gt;
+  <br>&lt;html lang="en"&gt;
+  <br>&lt;head&gt;
+  <br>&nbsp; &nbsp; &lt;meta charset="UTF-8"&gt;
+  <br>&nbsp; &nbsp; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  <br>&nbsp; &nbsp; &lt;title&gt;JIPCOM Invitation&lt;/title&gt;
+  <br>&nbsp; &nbsp; &lt;style&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; body {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-family: Arial, sans-serif;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 0;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 0;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: flex;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; flex-direction: column;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; align-items: center;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; justify-content: center;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height: 100vh;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: #f0f0f0;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; .card {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width: 140mm;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height: 70mm;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 1px solid #000;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: #fff;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: relative;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 5mm;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: flex;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; flex-direction: column;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; align-items: center;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; justify-content: center;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; .qrcode {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width: 40mm; /* Increased width */
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; height: 40mm; /* Increased height */
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-bottom: 3mm;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-top: 10mm; /* Adjusted margin */
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; .username {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 12px;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-weight: bold;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-bottom: 5mm;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; .corner-text {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 6px;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position: absolute;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width: calc(100% - 10mm);
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; .top-left {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; top: 1mm; /* Moved upwards */
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left: 5mm;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; .bottom-right {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bottom: 3mm; /* Moved downwards */
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; right: 5mm;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; .input-container {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-bottom: 10px;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; .input-container input {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 5px;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 14px;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; .input-container button {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 5px 10px;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-size: 14px;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cursor: pointer;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; /* Hide input fields and buttons when printing */
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; @media print {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .input-container {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: none;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &lt;/style&gt;
+  <br>&lt;/head&gt;
+  <br>&lt;body&gt;
+  <br>&nbsp; &nbsp; &lt;div class="input-container"&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="text" id="username" placeholder="Enter your username"&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;button onclick="updateCard()"&gt;Update Card&lt;/button&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;button onclick="window.print()"&gt;Print&lt;/button&gt;
+  <br>&nbsp; &nbsp; &lt;/div&gt;
+</p>
+
+<p>&nbsp; &nbsp; &lt;div class="card" id="invitationCard"&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="corner-text top-left"&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Error: Code Execution Glitch&lt;br&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Hex Code: 20 20 20 47 6C 6F 72 79 20 74 6F 20 47 6F 64 20 61 6C 6F 6E 65&lt;br&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System Notification: Please Stand By.
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src="https://static2.yooco.de/n2/e4/790639/u/7f/3837881/storage/qrcode_24.png" alt="QR Code" class="qrcode"&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="username" id="cardUsername"&gt;Your Username&lt;/div&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="corner-text bottom-right"&gt;JIPCOM: Fostering Connections, Unlocking New Horizons&lt;/div&gt;
+  <br>&nbsp; &nbsp; &lt;/div&gt;
+</p>
+
+<p>&nbsp; &nbsp; &lt;script&gt;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; function updateCard() {
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var username = document.getElementById('username').value;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById('cardUsername').textContent = username;
+  <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+  <br>&nbsp; &nbsp; &lt;/script&gt;
+  <br>&lt;/body&gt;
+  <br>&lt;/html&gt;
+</p>
